@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     a_new_user = User.new
     a_new_user.username = input_user
     a_new_user.save
-    redirect_to("/users")
+    redirect_to("/users/" + a_new_user.username)
   end
   def update
     the_id = params.fetch("path_id")
